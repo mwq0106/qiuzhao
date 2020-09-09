@@ -1,10 +1,8 @@
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        test2();
+
     }
     static void test1() {
         Scanner in = new Scanner(System.in);
@@ -48,6 +46,18 @@ public class Main {
         Scanner in = new Scanner(System.in);
         int n=in.nextInt();
         System.out.println(n);
+    }
+    public static Set<String> showMap(Map<String, Object> map) {
+        //TODO your code goes here...
+        Set<String> set = new HashSet<>();
+        for (Map.Entry entry:map.entrySet()){
+            if(entry.getValue().getClass().equals(Integer.class)){
+                set.add(entry.getKey() +" = " +entry.getValue());
+            }else if(entry.getValue().getClass().equals(String.class)){
+
+            }
+        }
+        return null;
     }
 
 }
